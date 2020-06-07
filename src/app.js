@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import './style.css';
 import ListItems from './listitems'
 
@@ -50,7 +50,7 @@ class App extends Component {
       setUpdate(text,key){
         console.log("items:"+this.state.items);
         const items = this.state.items;
-        items.map(item=>{      
+        items.forEach(item=>{      
           if(item.key===key){
             console.log(item.key +"    "+key)
             item.text= text;
